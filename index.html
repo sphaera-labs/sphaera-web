@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario</title>
+</head>
+
+<body style="margin:0; padding:0; background:#f4f6f8; font-family: Arial, sans-serif; color:#1f2937;">
+  <div style="max-width:720px; margin:0 auto; padding:28px 18px;">
+    <div style="background:#ffffff; border-radius:14px; padding:26px; box-shadow:0 10px 30px rgba(0,0,0,0.07); border:1px solid #e8eef5;">
+      
+      <div style="margin-bottom:18px;">
+        <h2 style="margin:0; font-size:22px; color:#111827;">Déjanos tus datos</h2>
+        <p style="margin:8px 0 0; color:#6b7280; font-size:14px;">
+          Completa el formulario y te contactaremos pronto.
+        </p>
+      </div>
+
+      <!-- ✅ CAMBIA ESTA URL por tu Webhook de n8n -->
+      <form action="https://automation.sphaeratech.io/webhook-test/formulario-registro" method="POST" style="margin:0;">
+        
+        <label for="nombre" style="display:block; font-size:13px; color:#374151; margin:14px 0 6px;">
+          Nombre
+        </label>
+        <input
+          id="nombre"
+          name="nombre"
+          type="text"
+          required
+          autocomplete="name"
+          placeholder="Tu nombre"
+          style="width:100%; box-sizing:border-box; padding:12px 12px; border-radius:10px; border:1px solid #dbe5ef; background:#fbfdff; outline:none; font-size:14px;"
+        />
+
+        <label for="empresa" style="display:block; font-size:13px; color:#374151; margin:14px 0 6px;">
+          Empresa
+        </label>
+        <input
+          id="empresa"
+          name="empresa"
+          type="text"
+          required
+          placeholder="Nombre de tu empresa"
+          style="width:100%; box-sizing:border-box; padding:12px 12px; border-radius:10px; border:1px solid #dbe5ef; background:#fbfdff; outline:none; font-size:14px;"
+        />
+
+        <label for="email" style="display:block; font-size:13px; color:#374151; margin:14px 0 6px;">
+          Email
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+          placeholder="tunombre@correo.com"
+          style="width:100%; box-sizing:border-box; padding:12px 12px; border-radius:10px; border:1px solid #dbe5ef; background:#fbfdff; outline:none; font-size:14px;"
+        />
+
+        <label for="telefono" style="display:block; font-size:13px; color:#374151; margin:14px 0 6px;">
+          Teléfono
+        </label>
+        <input
+          id="telefono"
+          name="telefono"
+          type="tel"
+          required
+          autocomplete="tel"
+          placeholder="+593 9xxxx xxxx"
+          style="width:100%; box-sizing:border-box; padding:12px 12px; border-radius:10px; border:1px solid #dbe5ef; background:#fbfdff; outline:none; font-size:14px;"
+        />
+
+        <!-- Opcional: campo hidden para tracking -->
+        <input type="hidden" name="source" value="landing-web" />
+
+        <button
+          type="submit"
+          style="margin-top:18px; width:100%; padding:12px 14px; border:none; border-radius:10px; background:#2563eb; color:white; font-size:15px; font-weight:bold; cursor:pointer;"
+        >
+          Enviar
+        </button>
+
+        <p style="margin:12px 0 0; font-size:12px; color:#6b7280; text-align:center;">
+          Al enviar aceptas que te contactemos con la información proporcionada.
+        </p>
+      </form>
+    </div>
+
+    <p style="text-align:center; margin:14px 0 0; font-size:12px; color:#9ca3af;">
+      Formulario seguro · Datos enviados a n8n
+    </p>
+  </div>
+</body>
+</html>
